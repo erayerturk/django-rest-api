@@ -8,6 +8,8 @@ virtualenv venv
 source venv/bin/activate
 
 pip3 install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
 python manage.py create superuser
 python manage.py crontab add
 python manage.py runserver
