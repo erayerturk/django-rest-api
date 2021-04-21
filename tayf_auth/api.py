@@ -104,7 +104,6 @@ def reset_password(request, payload: ResetPasswordSchema):
 
 
 def _generate_access_token(user: CustomUser):
-    # TODO: Helpersa al
     now = datetime.datetime.now(tz=pytz.utc)
     payload = {
         "sub": user.id,
