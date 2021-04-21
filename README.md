@@ -17,25 +17,25 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 
 # Creating DB
-python manage.py makemigrations
-python manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py migrate
 
 # Creating a super user (for 'Sex' field > Male: 0, Female: 1)
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 
 # Running cron for notes' alarm
-python manage.py crontab add
+python3 manage.py crontab add
 
 # Running application
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 ## Cron job commands
 
 ```
-python manage.py crontab add
-python manage.py crontab show
-python manage.py crontab remove
+python3 manage.py crontab add
+python3 manage.py crontab show
+python3 manage.py crontab remove
 ```
 
 ## Documentation
