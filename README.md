@@ -13,7 +13,7 @@ sudo apt install virtualenv
 python3 -m venv venv
 source venv/bin/activate
 
-# Installing dependecies
+# Installing dependencies
 pip3 install -r requirements.txt
 
 # Creating DB
