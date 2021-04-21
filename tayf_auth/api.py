@@ -46,7 +46,7 @@ def register(request, payload: RegisterSchema):
             created_user = CustomUser.objects.get(pk=user.id)
             access_token = _generate_access_token(created_user)
             activation_link = f'http://127.0.0.1:8000/api/v1/tayf_auth/activate/{access_token}'
-            send_mail('Subject here', f'Click to activate. {activation_link}', 'no-reply@erayerturk.com', [user.email],
+            send_mail('Activation Mail', f'Click to activate. {activation_link}', 'no-reply@erayerturk.com', [user.email],
                       fail_silently=False, )
         return 200, user
     else:

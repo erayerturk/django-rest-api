@@ -1,17 +1,32 @@
-## How to run
+## How to run (on Linux)
 
 ```
+# Cloning repository
 git clone https://github.com/erayerturk/django-rest-api.git
 cd django-rest-api
-pip3 install virtualenv 
-virtualenv venv
+
+# Installing virtualenv
+sudo apt-get install python3-venv
+sudo apt install virtualenv
+
+# Creating virtual environment
+python3 -m venv venv
 source venv/bin/activate
 
+# Installing dependecies
 pip3 install -r requirements.txt
+
+# Creating DB
 python manage.py makemigrations
 python manage.py migrate
-python manage.py create superuser
+
+# Creating a super user (for 'Sex' field > Male: 0, Female: 1)
+python manage.py createsuperuser
+
+# Running cron for notes' alarm
 python manage.py crontab add
+
+# Running application
 python manage.py runserver
 ```
 
